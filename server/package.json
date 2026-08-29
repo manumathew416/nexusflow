@@ -1,0 +1,26 @@
+{
+  "name": "nexusflow-server",
+  "version": "1.0.0",
+  "description": "NexusFlow Backend - Ingestion API, RxJS Stream Engine & WebSocket Broadcaster",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "simulate": "node src/simulator/cliSimulator.js",
+    "test": "node test/engine.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "rxjs": "^7.8.2",
+    "uuid": "^11.0.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

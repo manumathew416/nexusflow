@@ -1,0 +1,119 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --bg-primary: #090d16;
+    --bg-surface: #0f172a;
+    --bg-card: #1e293b;
+    --border-color: #334155;
+  }
+
+  body {
+    background-color: #090d16;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom React Flow Styling */
+.react-flow__renderer {
+  background-color: #090d16 !important;
+}
+
+.react-flow__node {
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.react-flow__node.selected {
+  box-shadow: 0 0 0 2px #00f0ff, 0 0 20px rgba(0, 240, 255, 0.4) !important;
+}
+
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00f0ff;
+  border: 2px solid #090d16;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  transform: scale(1.4);
+  background: #ff007f;
+}
+
+.react-flow__controls {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.react-flow__controls-button {
+  background: #0f172a !important;
+  border-bottom: 1px solid #334155 !important;
+  fill: #94a3b8 !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #1e293b !important;
+  fill: #00f0ff !important;
+}
+
+.react-flow__minimap {
+  background: #0b1120 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+}
+
+/* Glowing Flow Edge Animation */
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.pulsing-edge {
+  stroke: #00f0ff !important;
+  stroke-width: 3 !important;
+  stroke-dasharray: 6 6;
+  animation: flowDash 0.8s linear infinite;
+  filter: drop-shadow(0 0 6px #00f0ff);
+}
+
+.alert-edge {
+  stroke: #ff007f !important;
+  stroke-width: 3.5 !important;
+  stroke-dasharray: 6 6;
+  animation: flowDash 0.5s linear infinite;
+  filter: drop-shadow(0 0 8px #ff007f);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
